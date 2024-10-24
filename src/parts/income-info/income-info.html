@@ -1,0 +1,81 @@
+<div class="col was-validated">
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fa-solid fa-book"></i>
+            收入歸屬
+        </div>
+        <div class="card-body">
+            <div class="form-floating mb-3">
+                <table class="table table-striped table-hover" id="datatablesIncomeBelongs">
+                    <thead>
+                        <tr>
+                            <th colspan="4">
+                                <div class="row">
+                                    <div class="col-auto me-auto"></div>
+                                    <div class="col-auto">
+                                        <a class="file-input-wrapper btn file">
+                                            大量上傳
+                                            <input class="file" id="inputFileUploadIncomeBelongs" type="file"
+                                                placeholder="請選擇收入歸屬csv檔" title="大量上傳" data-browse-on-zone-click="true"
+                                                multiple />
+                                        </a>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="col">入帳單位 (代碼)</th>
+                            <th scope="col">加盟主部份<span class="form-text" id="isFederationDescribe">當組織為門市時才可勾選</span></th>
+                            <th scope="col">金額</th>
+                            <th scope="col" style="width: 15%">功能選項</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of model.accountingUnits">
+                            <td>{{item.unitName}}({{item.unitId}})</td>
+                            <td>{{item.isFC ? "Y" : ""   }}</td>
+                            <td>{{item.amount | currency : 'TWD':'symbol':'1.0-0'}}</td>
+                            <td>
+                                <div class="btn-group btn-group-sm">
+                                    <button class="btn btn-outline-danger" type="button" title="刪除" (click)="edit(item)" *ngIf="!model.isReadOnly('businessTypeCode', flowInfo)"><i class="fa-solid fa-pencil"></i></button>
+                                </div>
+                                <div class="btn-group btn-group-sm">
+                                    <button class="btn btn-outline-danger" type="button" title="刪除" (click)="delete(item)" *ngIf="!model.isReadOnly('businessTypeCode', flowInfo)"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>小計: {{this.total()}}</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    <tfoot *ngIf="!model.isReadOnly('inputInvoice', flowInfo)">
+                        <tr>
+                            <td>
+                                <input-autocomplete [id]="'inputInvoiceTitle'" [title]="'入帳單位(代碼)'" [(value)]="accountingUnit.unitId" [(name)]="accountingUnit.unitName"
+                                [getPagingAssistEvent]="getOrganization.bind(this)" [model]="'select'"
+                                [isReadOnly]="model.isReadOnly('inputInvoiceTitle', flowInfo)"></input-autocomplete>
+                            </td>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" id="isFederation" type="checkbox" [(ngModel)]="accountingUnit.isFC"/>
+                                    <label class="form-check-label" for="isFederation">加盟主部份</label>
+                                </div>
+                            </td>
+                            <td>
+                                <input-currency [id]="'accountingUnit.amount'" [title]="'金額'" [(inputValue)]="accountingUnit.amount" [isReadOnly]="model.isReadOnly('accountingUnit.amount', flowInfo)"></input-currency>
+                            <td>
+                                <div class="btn-group btn-group-sm" role="group" aria-label="編輯狀態按鈕">
+                                    <button class="btn btn-outline-success" type="button" title="確定" (click)="insert()"><i class="fa-solid fa-check"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" title="取消" (click)="cancel()"><i class="fa-solid fa-xmark"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

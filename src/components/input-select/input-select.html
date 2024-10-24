@@ -1,0 +1,9 @@
+<!-- -->
+
+<div class="form-floating">
+    <select class="form-select" [(ngModel)]="selectedValue" (change)="change($event)" [attr.aria-label]="title" [disabled]="isReadOnly" [required]="isRequired">
+        <option value="" selected disabled>請選擇</option>
+        <option *ngFor="let item of options" [value]="item.value">{{item.name}}</option>
+    </select>
+    <label>{{title}}</label>
+</div>

@@ -1,0 +1,24 @@
+<button class="btn btn-outline-info" id="d1" type="button" data-bs-toggle="modal" data-bs-target="#modalDialogApprovalState">簽核狀態</button>
+
+<div class="modal fade" id="modalDialogApprovalState" tabindex="-1" aria-labelledby="modalTitleHeaderForApprovalState"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">簽核狀態</h5>
+                <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <ng-container *ngFor="let node of nodes; let i = index">
+                        <span class="btn"
+                            [ngClass]="flowInfo.currentNodeId == node.id ? 'btn-primary': ' btn-outline-secondary'"
+                            disabled="">{{node.name}}</span>
+                        <span *ngIf="node.nodeType != NodeType.End">→</span>
+                    </ng-container>
+                </div>
+            </div>
+            <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">關閉</button></div>
+        </div>
+    </div>
+</div>

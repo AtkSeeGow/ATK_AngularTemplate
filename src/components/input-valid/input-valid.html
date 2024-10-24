@@ -1,0 +1,13 @@
+<!-- -->
+
+<spinner-overlay [loadingText]="'資料驗證中...'">
+    <div class="form-floating mb-3 mb-md-0 position-relative">
+        <input class="form-control" type="text" [disabled]="isReadOnly" [required]="isRequired" [(ngModel)]="value"
+            (blur)="blur()" />
+        <label>{{title}}</label>
+        <span *ngIf="verificationFailureMessage != ''" class="badge bg-danger position-absolute"
+            style="top: 50%; right: 10px; transform: translateY(-50%);">
+            {{verificationFailureMessage}}
+        </span>
+    </div>
+</spinner-overlay>

@@ -1,0 +1,9 @@
+<!-- -->
+
+<div class="form-floating">
+    <input #inputElement class="form-control" type="text" matInput [formControl]="formControl" [matAutocomplete]="auto" (click)="click()" (blur)="blur()" (focus)="focus()" (change)="change()" [readonly]="isReadOnly" [required]="isRequired">
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onOptionSelected($event)">
+        <mat-option *ngFor="let item of filteredOptions | async" [value]="item">{{item.toString()}}</mat-option>
+    </mat-autocomplete>
+    <label>{{title}}</label>
+</div>

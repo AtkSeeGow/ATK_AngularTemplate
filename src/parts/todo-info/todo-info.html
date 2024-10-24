@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div>
+                    <i class="fa-solid fa-address-card"></i>
+                    {{title}}
+                </div>
+                <div>
+                    <div class="badge bg-primary rounded-pill">
+                        <pager-info [model]="pagerModel" [onlyRecordCount]="onlyRecordCount"></pager-info>
+                    </div>
+                    <div *ngIf="onlyRecordCount" class="badge bg-primary rounded-pill" (click)="more()">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+            <spinner-overlay [loadingText]="'資料載入中...'">
+                <div *ngIf="pagingAssist.recordsCount! > 0" class="card-body">
+                    <div class="table-responsive">
+                        <div>
+                            <table data-sortable class="table table-hover table-striped ">
+                                <thead>
+                                    <tr>
+                                        <th>表單類型</th>
+                                        <th>表單編號</th>
+                                        <th>申請部門</th>
+                                        <th>申請人</th>
+                                        <th>申請日期</th>
+                                        <th>關卡</th>
+                                        <th>審核人</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of pagingAssist.target">
+                                        <td>{{item.formTypeName}}</td>
+                                        <td><a [href]="item.formId | formUrl: item.formType">{{item.formNumber}}</a>
+                                        </td>
+                                        <td>{{item.applicantUnitName}}</td>
+                                        <td>{{item.applicantPersonName}}</td>
+                                        <td>{{item.createDate | date: 'yyyy/MM/dd hh:MM:ss'}}</td>
+                                        <td>{{item.nodeName}}</td>
+                                        <td>{{item.receiveName}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <pager *ngIf="showPager" [model]="pagerModel"></pager>
+                </div>
+                <div *ngIf="pagingAssist.recordsCount! == 0" class="card-body">
+                    <div class="table-responsive">
+                        <div class="text-center mt-4">
+                            <p>目前沒有資料</p>
+                        </div>
+                    </div>
+                </div>
+            </spinner-overlay>
+        </div>
+    </div>
+</div>

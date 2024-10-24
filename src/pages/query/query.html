@@ -1,0 +1,7 @@
+<layout>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4"></h1>
+        <query-condition [title]="'查詢條件'" [condition]="condition" [queryEvent]="queryEvent.bind(this)"></query-condition>
+        <query-result [title]="'查詢結果'" [condition]="condition"></query-result>
+    </div>
+</layout>

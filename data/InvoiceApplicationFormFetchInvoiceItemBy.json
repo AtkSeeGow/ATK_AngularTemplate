@@ -1,0 +1,13 @@
+{
+    "InvoiceApplicationFormFetchInvoiceItemBy": {
+        "recordsCount": 1,
+        "currentIndex": 0,
+        "pageSize": 25,
+        "target": [
+            {
+                "invoiceItemDescription": "汽油",
+                "invoiceItemCode": "999"
+            }
+        ]
+    }
+}

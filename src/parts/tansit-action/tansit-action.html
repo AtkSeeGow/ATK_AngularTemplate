@@ -1,0 +1,11 @@
+<div class="row" id="makeActionCommandWindow">
+  <div class="col-auto me-auto btn-group" role="group" aria-label="approval main buttons">
+    <ng-container *ngFor="let dialogTransitActionModel of dialogTransitActionModels">
+      <dialog-transit-action [model]="dialogTransitActionModel"></dialog-transit-action>
+    </ng-container> 
+  </div>
+  <div class="col-auto" role="group" aria-label="approval minor buttons">
+    <dialog-approval-state [flowInfo]="flowInfo"></dialog-approval-state>
+    <dialog-approval-history [actionRecords]="actionRecords"></dialog-approval-history>
+  </div>
+</div>

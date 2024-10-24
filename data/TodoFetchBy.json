@@ -1,0 +1,28 @@
+{
+  "TodoFetchBy": {
+    "recordsCount": 1,
+    "currentIndex": 0,
+    "pageSize": 25,
+    "target": [
+      {
+        "formId": "d6070902-8308-4d1f-85fc-7933a9c99477",
+        "formNumber": "IA20240004",
+        "applicantUnitId": "123132",
+        "applicantPersonId": "12312@hotmail.com",
+        "receiveType": 1,
+        "receiveId": "123123@hotmail.com",
+        "createDate": "2024-06-14T15:10:06.854+08:00",
+        "receiptDate": "2024-06-14T15:10:06.855+08:00",
+        "formType": 1,
+        "processType": 2,
+        "isEnabled": true,
+        "applicantUnitName": "領先技術開發部",
+        "applicantPersonName": "陳韋仲",
+        "receiveName": "陳韋仲",
+        "nodeName": "申請人",
+        "formTypeName": "發票開立",
+        "id": "f0d2e9c5-ecca-404a-aeb9-fc5bbd3e9cf6"
+      }
+    ]
+  }
+}

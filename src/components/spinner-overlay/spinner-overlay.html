@@ -1,0 +1,9 @@
+<div style="position: relative;">
+    <div *ngIf="isOverlay" class="overlay d-flex justify-content-center align-items-center" [ngClass]="isOverlayPart ? 'overlay-part' : 'overlay-window'">
+        <div class="spinner-border text-light" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="loading-text">{{loadingText}}</div>
+    </div>
+    <ng-content></ng-content>
+</div>

@@ -1,0 +1,36 @@
+<div class="col">
+  <div class="card mb-4">
+      <div class="card-header">
+          <svg class="svg-inline--fa fa-address-card" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="address-card" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 256h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zm256-32H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg><!-- <i class="fa-solid fa-address-card"></i> Font Awesome fontawesome.com -->
+          申請人相關資訊
+      </div>
+      <div class="card-body">
+          <div class="row mb-3">
+              <div class="col-md-3">
+                  <div class="form-floating mb-3 mb-md-0">
+                      <input class="form-control" type="text" readonly="" [ngModel]="model.formNumber">
+                      <label >表單編號</label>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="form-floating mb-3 mb-md-0">
+                      <input class="form-control" type="text" readonly="" [ngModel]="model.applicationDate">
+                      <label>申請日期</label>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="form-floating mb-3 mb-md-0">
+                      <input class="form-control" type="text" readonly="" [ngModel]="model.applicantUnitName">
+                      <label>申請人單位</label>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="form-floating">
+                      <input class="form-control" type="text" readonly="" [ngModel]="model.applicantPersontName">
+                      <label>申請人</label>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

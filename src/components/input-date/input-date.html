@@ -1,0 +1,6 @@
+<!-- -->
+
+<div class="form-floating">
+    <input inputDate class="form-control" [ngModel]="inputValue | date:'yyyy-MM-dd'" (ngModelChange)="inputValue = $event + 'T00:00:00'" type="date" required  [readonly]="isReadOnly"/>
+    <label>{{title}}</label>
+</div>

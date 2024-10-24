@@ -1,0 +1,79 @@
+<div class="col was-validated" *ngIf="condition">
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fa-solid fa-address-card"></i>
+            {{title}}
+        </div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="form-floating mb-3 mb-md-0">
+                        <input class="form-control" type="text" [(ngModel)]="condition.formNumber">
+                        <label>表單編號</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="form-floating mb-3 mb-md-0">
+                        <select class="form-select" [(ngModel)]="condition.formStatus">
+                            <option [value]="ActivationStatus.None">全部</option>
+                            <option [value]="ActivationStatus.Activate">進行中</option>
+                            <option [value]="ActivationStatus.Done">完成</option>
+                        </select>
+                        <label>表單狀態</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating mb-3 mb-md-0">
+                        <select class="form-select" [(ngModel)]="condition.formType">
+                            <option [value]="FormType.InvoiceApplicationForm">發票申請</option>
+                            <option [value]="FormType.InvoiceVoidingForm">發票作廢</option>
+                        </select>
+                        <label>表單類型</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="form-floating mb-3 mb-md-0">
+                        <input-autocomplete [id]="'applicantPersonId'" [title]="'申請人'"
+                            [(value)]="condition.applicantPersonId" [(name)]="condition.applicantPersonName"
+                            [getPagingAssistEvent]="getPerson.bind(this)" [model]="''" [isRequired]="false"
+                            [isReadOnly]="false"></input-autocomplete>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating mb-3 mb-md-0">
+                        <input-autocomplete [id]="'businessTypeCode'" [title]="'經手人'"
+                            [(value)]="condition.handlerPersonId" [(name)]="condition.handlerPersonName"
+                            [getPagingAssistEvent]="getPerson.bind(this)" [model]="''" [isRequired]="false"
+                            [isReadOnly]="false"></input-autocomplete>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="form-floating mb-3 mb-md-0">
+                        <input-date [title]="'申請日期起'" [(inputValue)]="condition.beginApplicationDate"
+                            [isReadOnly]="false"></input-date>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating mb-3 mb-md-0">
+                        <input-date [title]="'申請日期迄'" [(inputValue)]="condition.endApplicationDate"
+                            [isReadOnly]="false"></input-date>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary col-md-12" (click)="query()">查詢</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
