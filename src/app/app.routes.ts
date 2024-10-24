@@ -22,14 +22,9 @@ export const routes: Routes = [
         loadComponent: () => import('../pages/todo-more/todo-more.component').then((item) => item.TodoMoreComponent),
     },
     {
-        path: 'InvoiceApplicationForm',
+        path: 'Form',
         canActivate: [Authorization],
-        loadComponent: () => import('../pages/invoice-application-form/invoice-application-form.component').then((item) => item.InvoiceApplicationFormComponent),
-    },
-    {
-        path: 'InvoiceVoidingForm',
-        canActivate: [Authorization],
-        loadComponent: () => import('../pages/invoice-voiding-form/invoice-voiding-form.component').then((item) => item.InvoiceVoidingFormComponent),
+        loadComponent: () => import('../pages/form/form.component').then((item) => item.FormComponent),
     },
     {
         path: 'Query',

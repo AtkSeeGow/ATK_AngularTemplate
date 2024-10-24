@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0 --proxy-config ./src/proxy.conf.js",
     "start:all": "concurrently \"npm run start\" \"npm run json-server\"",
-    "build": "ng build --base-href /InvoiceApplicationAndVoid.Web/",
+    "build": "ng build --base-href /ATK_AngularTemplate/",
     "watch": "ng build --watch --configuration development",
     "merge-data": "node data/merge-data.js",
     "json-server": "json-server --watch data/db.json --routes data/routes.json --middlewares data/middleware.ts",
