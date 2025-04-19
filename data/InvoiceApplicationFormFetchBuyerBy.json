@@ -1,0 +1,13 @@
+{
+    "InvoiceApplicationFormFetchBuyerBy": {
+        "recordsCount": 1,
+        "currentIndex": 0,
+        "pageSize": 25,
+        "target": [
+            {
+                "customerCode": "aaa",
+                "customerName": "bbb"
+            }
+        ]
+    }
+}

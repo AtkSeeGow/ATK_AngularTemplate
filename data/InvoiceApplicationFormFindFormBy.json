@@ -1,0 +1,550 @@
+{
+  "InvoiceApplicationFormFindFormBy": {
+    "form": {
+        "model": {
+            "applicantUnitName": "後勤系統TEAM",
+            "applicantPersontName": "陳韋仲",
+            "businessTypeName": "1",
+            "customerGroupName": "2",
+            "customerName": "3",
+            "invoiceItemDescription": "4",
+            "buyerName": "5",
+            "applicationReason": "6",
+            "businessTypeCode": "7",
+            "customerGroupCode": "8",
+            "customerCode": "9",
+            "accountingDocumentType": [
+                {
+                    "type": "AccountingDocumentType",
+                    "value": "X8",
+                    "name": "X8",
+                    "isChecked": false
+                },
+                {
+                    "type": "AccountingDocumentType",
+                    "value": "SA",
+                    "name": "SA",
+                    "isChecked": false
+                },
+                {
+                    "type": "AccountingDocumentType",
+                    "value": "YG",
+                    "name": "YG",
+                    "isChecked": false
+                },
+                {
+                    "type": "AccountingDocumentType",
+                    "value": "YB",
+                    "name": "YB",
+                    "isChecked": false
+                }
+            ],
+            "invoiceItemCode": "",
+            "taxType": [
+                {
+                    "type": "TaxType",
+                    "value": "Taxable",
+                    "name": "應稅",
+                    "isChecked": false
+                },
+                {
+                    "type": "TaxType",
+                    "value": "TaxExempted",
+                    "name": "免稅",
+                    "isChecked": false
+                },
+                {
+                    "type": "TaxType",
+                    "value": "ZeroTax",
+                    "name": "零稅",
+                    "isChecked": false
+                }
+            ],
+            "invoiceType": [
+                {
+                    "type": "InvoiceType",
+                    "value": "Triplicate",
+                    "name": "三聯式",
+                    "isChecked": false
+                },
+                {
+                    "type": "InvoiceType",
+                    "value": "Duplicate",
+                    "name": "二聯式",
+                    "isChecked": false
+                }
+            ],
+            "buyerCode": "1",
+            "invoiceAmount": 11.0,
+            "salesAmount": 22.0,
+            "taxAmount": 33.0,
+            "paymentMethod": [
+                {
+                    "type": "PaymentMethods",
+                    "value": "TransferMoney",
+                    "name": "轉帳\\匯款",
+                    "isChecked": false
+                },
+                {
+                    "type": "PaymentMethods",
+                    "value": "Cash",
+                    "name": "現金",
+                    "isChecked": false
+                }
+            ],
+            "invoiceDate": "2024-12-31",
+            "accountingUnits": [],
+            "formId": "91112f2c-6c6c-4cab-b9c0-d9be965fec93",
+            "formNumber": "IA20240665",
+            "applicationDate": "2024-12-31",
+            "applicantUnitId": "1112",
+            "applicantPersonId": "atkseegow@hotmail.com",
+            "id": "00000000-0000-0000-0000-000000000000"
+        },
+        "formInfo": {
+            "formId": "91112f2c-6c6c-4cab-b9c0-d9be965fec93",
+            "activationStatus": 0,
+            "formType": 1,
+            "createDate": "2024-06-26T17:44:37.6663588+08:00",
+            "id": "00000000-0000-0000-0000-000000000000"
+        },
+        "flowInfo": {
+            "matchNode": {
+                "name": "申請人",
+                "receiveType": 1,
+                "receiveId": "atkseegow@hotmail.com",
+                "nodeType": 3,
+                "activationStatus": 0,
+                "id": "1f10f6af-1232-4a46-8f3b-42dd4282d1db"
+            },
+            "formId": "91112f2c-6c6c-4cab-b9c0-d9be965fec93",
+            "currentNodeId": "1f10f6af-1232-4a46-8f3b-42dd4282d1db",
+            "nodes": [
+                {
+                    "name": "開始",
+                    "receiveType": 0,
+                    "receiveId": "",
+                    "nodeType": 1,
+                    "activationStatus": 0,
+                    "id": "997927df-4f8a-487e-bbe2-2885a37dbd7a"
+                },
+                {
+                    "name": "申請人",
+                    "receiveType": 1,
+                    "receiveId": "atkseegow@hotmail.com",
+                    "nodeType": 3,
+                    "activationStatus": 0,
+                    "id": "1f10f6af-1232-4a46-8f3b-42dd4282d1db"
+                },
+                {
+                    "name": "作廢",
+                    "receiveType": 0,
+                    "receiveId": "",
+                    "nodeType": 5,
+                    "activationStatus": 0,
+                    "id": "7dff433b-eb74-4a51-816c-99368403a3c0"
+                },
+                {
+                    "name": "直屬主管",
+                    "receiveType": 3,
+                    "receiveId": "26295c5d-f485-4731-9b5f-bba2a199658c",
+                    "nodeType": 4,
+                    "activationStatus": 0,
+                    "id": "d49b9b96-56b9-424b-83d5-e77a761f71c7"
+                },
+                {
+                    "name": "稅務窗口",
+                    "receiveType": 3,
+                    "receiveId": "bb38c0fb-3f4a-45a5-a4d0-9e5cb9cafd30",
+                    "nodeType": 7,
+                    "activationStatus": 0,
+                    "id": "fe9d2065-a0f1-4af1-a994-846cd452fef3"
+                },
+                {
+                    "name": "稅務窗口",
+                    "receiveType": 3,
+                    "receiveId": "bb38c0fb-3f4a-45a5-a4d0-9e5cb9cafd30",
+                    "nodeType": 7,
+                    "activationStatus": 0,
+                    "id": "fe9d2065-a0f1-4af1-a994-846cd452fef3"
+                },
+                {
+                    "name": "立帳人",
+                    "receiveType": 1,
+                    "receiveId": "atkseegow@hotmail.com",
+                    "nodeType": 6,
+                    "activationStatus": 0,
+                    "id": "e47010b1-fc45-4262-9425-3ccdf2c0d66a"
+                }
+            ],
+            "transits": [
+                {
+                    "transitType": 0,
+                    "name": "",
+                    "entryNode": {
+                        "name": "開始",
+                        "receiveType": 0,
+                        "receiveId": "",
+                        "nodeType": 1,
+                        "activationStatus": 0,
+                        "id": "997927df-4f8a-487e-bbe2-2885a37dbd7a"
+                    },
+                    "exitNode": {
+                        "name": "申請人",
+                        "receiveType": 1,
+                        "receiveId": "atkseegow@hotmail.com",
+                        "nodeType": 3,
+                        "activationStatus": 0,
+                        "id": "1f10f6af-1232-4a46-8f3b-42dd4282d1db"
+                    },
+                    "id": "5edf5423-81a4-4d31-80e9-cc8f6e32a165"
+                },
+                {
+                    "transitType": 2,
+                    "name": "送出",
+                    "entryNode": {
+                        "name": "申請人",
+                        "receiveType": 1,
+                        "receiveId": "atkseegow@hotmail.com",
+                        "nodeType": 3,
+                        "activationStatus": 0,
+                        "id": "1f10f6af-1232-4a46-8f3b-42dd4282d1db"
+                    },
+                    "exitNode": {
+                        "name": "直屬主管",
+                        "receiveType": 3,
+                        "receiveId": "26295c5d-f485-4731-9b5f-bba2a199658c",
+                        "nodeType": 4,
+                        "activationStatus": 0,
+                        "id": "d49b9b96-56b9-424b-83d5-e77a761f71c7"
+                    },
+                    "id": "2af70882-459e-4401-93d0-77204175c3e9"
+                },
+                {
+                    "transitType": 1,
+                    "name": "暫存",
+                    "entryNode": {
+                        "name": "申請人",
+                        "receiveType": 1,
+                        "receiveId": "atkseegow@hotmail.com",
+                        "nodeType": 3,
+                        "activationStatus": 0,
+                        "id": "1f10f6af-1232-4a46-8f3b-42dd4282d1db"
+                    },
+                    "exitNode": {
+                        "name": "申請人",
+                        "receiveType": 1,
+                        "receiveId": "atkseegow@hotmail.com",
+                        "nodeType": 3,
+                        "activationStatus": 0,
+                        "id": "1f10f6af-1232-4a46-8f3b-42dd4282d1db"
+                    },
+                    "id": "2df22831-8979-4b24-a2e0-9668b2bd0a91"
+                },
+                {
+                    "transitType": 3,
+                    "name": "作廢",
+                    "entryNode": {
+                        "name": "申請人",
+                        "receiveType": 1,
+                        "receiveId": "atkseegow@hotmail.com",
+                        "nodeType": 3,
+                        "activationStatus": 0,
+                        "id": "1f10f6af-1232-4a46-8f3b-42dd4282d1db"
+                    },
+                    "exitNode": {
+                        "name": "作廢",
+                        "receiveType": 0,
+                        "receiveId": "",
+                        "nodeType": 5,
+                        "activationStatus": 0,
+                        "id": "7dff433b-eb74-4a51-816c-99368403a3c0"
+                    },
+                    "id": "54118e2d-d831-4081-bb4b-e5d801145ace"
+                },
+                {
+                    "transitType": 4,
+                    "name": "核可",
+                    "entryNode": {
+                        "name": "直屬主管",
+                        "receiveType": 3,
+                        "receiveId": "26295c5d-f485-4731-9b5f-bba2a199658c",
+                        "nodeType": 4,
+                        "activationStatus": 0,
+                        "id": "d49b9b96-56b9-424b-83d5-e77a761f71c7"
+                    },
+                    "exitNode": {
+                        "name": "稅務窗口",
+                        "receiveType": 3,
+                        "receiveId": "bb38c0fb-3f4a-45a5-a4d0-9e5cb9cafd30",
+                        "nodeType": 7,
+                        "activationStatus": 0,
+                        "id": "fe9d2065-a0f1-4af1-a994-846cd452fef3"
+                    },
+                    "id": "3d2f405c-3763-40b3-bc37-b3585d168e52"
+                },
+                {
+                    "transitType": 6,
+                    "name": "向前加簽",
+                    "entryNode": {
+                        "name": "直屬主管",
+                        "receiveType": 3,
+                        "receiveId": "26295c5d-f485-4731-9b5f-bba2a199658c",
+                        "nodeType": 4,
+                        "activationStatus": 0,
+                        "id": "d49b9b96-56b9-424b-83d5-e77a761f71c7"
+                    },
+                    "exitNode": {
+                        "name": "直屬主管",
+                        "receiveType": 3,
+                        "receiveId": "26295c5d-f485-4731-9b5f-bba2a199658c",
+                        "nodeType": 4,
+                        "activationStatus": 0,
+                        "id": "d49b9b96-56b9-424b-83d5-e77a761f71c7"
+                    },
+                    "id": "e29f1b71-d4f5-4d68-8654-83597105f962"
+                },
+                {
+                    "transitType": 5,
+                    "name": "退回",
+                    "entryNode": {
+                        "name": "直屬主管",
+                        "receiveType": 3,
+                        "receiveId": "26295c5d-f485-4731-9b5f-bba2a199658c",
+                        "nodeType": 4,
+                        "activationStatus": 0,
+                        "id": "d49b9b96-56b9-424b-83d5-e77a761f71c7"
+                    },
+                    "exitNode": {
+                        "name": "申請人",
+                        "receiveType": 1,
+                        "receiveId": "atkseegow@hotmail.com",
+                        "nodeType": 3,
+                        "activationStatus": 0,
+                        "id": "1f10f6af-1232-4a46-8f3b-42dd4282d1db"
+                    },
+                    "id": "7d126488-c587-42b9-a09c-7e3921e30724"
+                },
+                {
+                    "transitType": 4,
+                    "name": "核可",
+                    "entryNode": {
+                        "name": "稅務窗口",
+                        "receiveType": 3,
+                        "receiveId": "bb38c0fb-3f4a-45a5-a4d0-9e5cb9cafd30",
+                        "nodeType": 7,
+                        "activationStatus": 0,
+                        "id": "fe9d2065-a0f1-4af1-a994-846cd452fef3"
+                    },
+                    "exitNode": {
+                        "name": "稅務主管",
+                        "receiveType": 3,
+                        "receiveId": "d8c19cbb-4f24-41ac-8340-e85895a97be5",
+                        "nodeType": 8,
+                        "activationStatus": 0,
+                        "id": "17f5f474-d48c-4974-bc60-f8ff11f97583"
+                    },
+                    "id": "391878cc-2122-4860-b334-a85a2b156e3d"
+                },
+                {
+                    "transitType": 6,
+                    "name": "向前加簽",
+                    "entryNode": {
+                        "name": "稅務窗口",
+                        "receiveType": 3,
+                        "receiveId": "bb38c0fb-3f4a-45a5-a4d0-9e5cb9cafd30",
+                        "nodeType": 7,
+                        "activationStatus": 0,
+                        "id": "fe9d2065-a0f1-4af1-a994-846cd452fef3"
+                    },
+                    "exitNode": {
+                        "name": "稅務窗口",
+                        "receiveType": 3,
+                        "receiveId": "bb38c0fb-3f4a-45a5-a4d0-9e5cb9cafd30",
+                        "nodeType": 7,
+                        "activationStatus": 0,
+                        "id": "fe9d2065-a0f1-4af1-a994-846cd452fef3"
+                    },
+                    "id": "6ee18a3f-bccc-49f4-b4a6-0a0cc3b836be"
+                },
+                {
+                    "transitType": 5,
+                    "name": "退回",
+                    "entryNode": {
+                        "name": "稅務窗口",
+                        "receiveType": 3,
+                        "receiveId": "bb38c0fb-3f4a-45a5-a4d0-9e5cb9cafd30",
+                        "nodeType": 7,
+                        "activationStatus": 0,
+                        "id": "fe9d2065-a0f1-4af1-a994-846cd452fef3"
+                    },
+                    "exitNode": {
+                        "name": "申請人",
+                        "receiveType": 1,
+                        "receiveId": "atkseegow@hotmail.com",
+                        "nodeType": 3,
+                        "activationStatus": 0,
+                        "id": "1f10f6af-1232-4a46-8f3b-42dd4282d1db"
+                    },
+                    "id": "8737e221-f661-46b5-80c3-9408769a24e8"
+                },
+                {
+                    "transitType": 4,
+                    "name": "核可",
+                    "entryNode": {
+                        "name": "稅務主管",
+                        "receiveType": 3,
+                        "receiveId": "d8c19cbb-4f24-41ac-8340-e85895a97be5",
+                        "nodeType": 8,
+                        "activationStatus": 0,
+                        "id": "17f5f474-d48c-4974-bc60-f8ff11f97583"
+                    },
+                    "exitNode": {
+                        "name": "立帳人",
+                        "receiveType": 1,
+                        "receiveId": "atkseegow@hotmail.com",
+                        "nodeType": 6,
+                        "activationStatus": 0,
+                        "id": "e47010b1-fc45-4262-9425-3ccdf2c0d66a"
+                    },
+                    "id": "6f98ac9d-13ea-4f1e-853a-6a243d16fd71"
+                },
+                {
+                    "transitType": 6,
+                    "name": "向前加簽",
+                    "entryNode": {
+                        "name": "稅務主管",
+                        "receiveType": 3,
+                        "receiveId": "d8c19cbb-4f24-41ac-8340-e85895a97be5",
+                        "nodeType": 8,
+                        "activationStatus": 0,
+                        "id": "17f5f474-d48c-4974-bc60-f8ff11f97583"
+                    },
+                    "exitNode": {
+                        "name": "稅務主管",
+                        "receiveType": 3,
+                        "receiveId": "d8c19cbb-4f24-41ac-8340-e85895a97be5",
+                        "nodeType": 8,
+                        "activationStatus": 0,
+                        "id": "17f5f474-d48c-4974-bc60-f8ff11f97583"
+                    },
+                    "id": "b7ebf156-e205-4b4e-b2fb-f5c6de1f389c"
+                },
+                {
+                    "transitType": 5,
+                    "name": "退回",
+                    "entryNode": {
+                        "name": "稅務主管",
+                        "receiveType": 3,
+                        "receiveId": "d8c19cbb-4f24-41ac-8340-e85895a97be5",
+                        "nodeType": 8,
+                        "activationStatus": 0,
+                        "id": "17f5f474-d48c-4974-bc60-f8ff11f97583"
+                    },
+                    "exitNode": {
+                        "name": "申請人",
+                        "receiveType": 1,
+                        "receiveId": "atkseegow@hotmail.com",
+                        "nodeType": 3,
+                        "activationStatus": 0,
+                        "id": "1f10f6af-1232-4a46-8f3b-42dd4282d1db"
+                    },
+                    "id": "a10611aa-a2c9-42b2-a7d4-b1d9a3de3de8"
+                },
+                {
+                    "transitType": 8,
+                    "name": "替換",
+                    "entryNode": {
+                        "name": "立帳人",
+                        "receiveType": 1,
+                        "receiveId": "atkseegow@hotmail.com",
+                        "nodeType": 6,
+                        "activationStatus": 0,
+                        "id": "e47010b1-fc45-4262-9425-3ccdf2c0d66a"
+                    },
+                    "exitNode": {
+                        "name": "結束",
+                        "receiveType": 0,
+                        "receiveId": "",
+                        "nodeType": 2,
+                        "activationStatus": 0,
+                        "id": "b81c1844-bf3c-4932-89f1-9f1080492b50"
+                    },
+                    "id": "4cdfdf5e-062e-4cb2-9b87-11b91025a1ed"
+                },
+                {
+                    "transitType": 4,
+                    "name": "核可",
+                    "entryNode": {
+                        "name": "立帳人",
+                        "receiveType": 1,
+                        "receiveId": "atkseegow@hotmail.com",
+                        "nodeType": 6,
+                        "activationStatus": 0,
+                        "id": "e47010b1-fc45-4262-9425-3ccdf2c0d66a"
+                    },
+                    "exitNode": {
+                        "name": "結束",
+                        "receiveType": 0,
+                        "receiveId": "",
+                        "nodeType": 2,
+                        "activationStatus": 0,
+                        "id": "b81c1844-bf3c-4932-89f1-9f1080492b50"
+                    },
+                    "id": "7dcb92af-e57c-4381-8205-8a74a7158dc9"
+                },
+                {
+                    "transitType": 6,
+                    "name": "向前加簽",
+                    "entryNode": {
+                        "name": "立帳人",
+                        "receiveType": 1,
+                        "receiveId": "atkseegow@hotmail.com",
+                        "nodeType": 6,
+                        "activationStatus": 0,
+                        "id": "e47010b1-fc45-4262-9425-3ccdf2c0d66a"
+                    },
+                    "exitNode": {
+                        "name": "立帳人",
+                        "receiveType": 1,
+                        "receiveId": "atkseegow@hotmail.com",
+                        "nodeType": 6,
+                        "activationStatus": 0,
+                        "id": "e47010b1-fc45-4262-9425-3ccdf2c0d66a"
+                    },
+                    "id": "1f010965-d1f6-4b08-bde9-06dbd145825a"
+                },
+                {
+                    "transitType": 5,
+                    "name": "退回",
+                    "entryNode": {
+                        "name": "立帳人",
+                        "receiveType": 1,
+                        "receiveId": "atkseegow@hotmail.com",
+                        "nodeType": 6,
+                        "activationStatus": 0,
+                        "id": "e47010b1-fc45-4262-9425-3ccdf2c0d66a"
+                    },
+                    "exitNode": {
+                        "name": "申請人",
+                        "receiveType": 1,
+                        "receiveId": "atkseegow@hotmail.com",
+                        "nodeType": 3,
+                        "activationStatus": 0,
+                        "id": "1f10f6af-1232-4a46-8f3b-42dd4282d1db"
+                    },
+                    "id": "b768dd29-16f6-41b3-aef4-c0673f70bac8"
+                }
+            ],
+            "id": "00000000-0000-0000-0000-000000000000"
+        },
+        "actionRecords": []
+    },
+    "messages": {
+        "isValid": true,
+        "successMessages": {},
+        "errorMessages": {}
+    }
+}
+  
+}

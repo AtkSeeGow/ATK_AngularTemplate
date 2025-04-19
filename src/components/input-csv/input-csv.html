@@ -1,0 +1,9 @@
+<!-- -->
+
+<spinner-overlay [loadingText]="'資料解析中...'">
+    <input type="file" (change)="onFileSelected($event)" accept=".csv" />
+    <div *ngIf="csvData">
+      <h2>CSV Data</h2>
+      <pre>{{ csvData | json }}</pre>
+    </div>
+</spinner-overlay>

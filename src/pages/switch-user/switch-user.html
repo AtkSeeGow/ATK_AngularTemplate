@@ -1,0 +1,16 @@
+<layout>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4"></h1>
+        <div class="form-floating mb-3">
+            <input class="form-control" type="text" [(ngModel)]="personId" />
+            <label>員工編號(含P)</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" type="text" [(ngModel)]="personName"/>
+            <label>員工姓名</label>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+            <a class="btn btn-primary" (click)="switch()">更換登入使用者</a>
+        </div>
+    </div>
+</layout>

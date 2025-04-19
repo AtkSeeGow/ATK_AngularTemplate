@@ -1,0 +1,9 @@
+<layout>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4"></h1>
+        <todo-info [title]="'待簽核'" [processType]="ProcessType.Approval"></todo-info>
+        <todo-info [title]="'進行中'" [processType]="ProcessType.Progress"></todo-info>
+        <todo-info [title]="'通知'" [processType]="ProcessType.Notification"></todo-info>
+        <todo-info [title]="'暫存'" [processType]="ProcessType.Temporary"></todo-info>
+    </div>
+</layout>

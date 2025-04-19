@@ -1,0 +1,25 @@
+<layout>
+  <div class="container-fluid px-4" id="content">
+    <spinner-overlay [isOverlayPart]="false" [loadingText]="'資料載入中...'">
+      <h1 class="mt-4">表單</h1>
+      <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item">首頁</li>
+        <li class="breadcrumb-item active">表單</li>
+      </ol>
+      <tansit-action [flowInfo]="form.flowInfo" [actionEvent]="transitAction.bind(this)" [actionRecords]="form.actionRecords" [formInfo]="form.formInfo"></tansit-action>
+      <div class="row justify-content-center">
+        <div class="col-xxl">
+          <div class="card shadow-lg border-0 rounded-lg mt-5">
+            <div class="card-body">
+              <applicant-info [model]="applicantInfoModel"></applicant-info>
+              <application-info [model]="applicationInfoModel" [flowInfo]="form.flowInfo"></application-info>
+              <invoice-info [model]="invoiceInfoModel" [flowInfo]="form.flowInfo"></invoice-info>
+              <income-info [model]="incomeInfoModel" [flowInfo]="form.flowInfo"></income-info>
+              <payment-info [model]="paymentInfoModel" [flowInfo]="form.flowInfo"></payment-info>
+            </div>
+          </div>
+        </div>
+      </div>
+    </spinner-overlay>
+  </div>
+</layout>

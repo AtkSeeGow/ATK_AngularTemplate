@@ -1,0 +1,46 @@
+<button [ngClass]="getButtonClass(model.transit)" class="btn" type="button" data-bs-toggle="modal"
+    (click)="showActionModal()">{{model.transit.name}}</button>
+
+<div #actionModal class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <spinner-overlay>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">請確認是否執行?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div *ngIf="canEditComment()">
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">意見:</label>
+                            <textarea class="form-control" id="message-text" [(ngModel)]="comment"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                    <button type="button" class="btn" [ngClass]="getButtonClass(model.transit)"
+                        (click)="action()">{{model.transit.name}}</button>
+                </div>
+            </div>
+        </spinner-overlay>
+    </div>
+</div>
+
+<div #completedModal class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{model.transit.name}}動作完成</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="reload()" *ngIf="canReload()">停留此頁</button>
+                <button type="button" class="btn" [ngClass]="getButtonClass(model.transit)" (click)="navigateToHome()">回到首頁</button>
+            </div>
+        </div>
+    </div>
+</div>

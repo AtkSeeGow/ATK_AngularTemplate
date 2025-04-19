@@ -1,0 +1,13 @@
+{
+  "CommonGetUserInfo": {
+    "id": "aa@hotmail.com",
+    "alias": "aa@hotmail.com",
+    "departmentId": "1112",
+    "name": "陳韋仲",
+    "titleName": "軟體工程師",
+    "positionCode2": "C",
+    "email": "aa@citystate.com.tw",
+    "belongCompanyName": "aaa",
+    "status": 0
+  }
+}

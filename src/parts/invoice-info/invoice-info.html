@@ -1,0 +1,41 @@
+<div class="col was-validated">
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fa-solid fa-receipt"></i>
+            發票資訊
+        </div>
+        <div class="card-body">
+          
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <input-select [id]="'taxType'" [title]="'稅別'" [(options)]="model.taxType" [isRequired]="true"
+                    [isReadOnly]="model.isReadOnly('taxType', flowInfo)" [linkageEvent]="model.linkageInvoiceInfo.bind(model)"></input-select>
+                </div>
+                <div class="col-md-4">
+                    <input-select [id]="'invoiceType'" [title]="'發票別'" [(options)]="model.invoiceType" [isRequired]="true"
+                    [isReadOnly]="model.isReadOnly('invoiceType', flowInfo)" [linkageEvent]="model.linkageInvoiceInfo.bind(model)"></input-select>
+                </div>
+                <div class="col-md-4">
+                    <input-autocomplete [id]="'inputInvoiceTitle'" [title]="'發票抬頭(買受人)'"
+                        [(value)]="model.buyerCode" [(name)]="model.buyerName"
+                        [getPagingAssistEvent]="getBuyer.bind(this)" [model]="'select'" [isRequired]="true"
+                        [isReadOnly]="model.isReadOnly('inputInvoiceTitle', flowInfo)"></input-autocomplete>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <input-currency [id]="'invoiceAmount'" [title]="'發票金額'" [(inputValue)]="model.invoiceAmount" [isRequired]="true"
+                    [isReadOnly]="model.isReadOnly('invoiceAmount', flowInfo)" [linkageEvent]="model.linkageAmount.bind(model)"></input-currency>
+                </div>
+                <div class="col-md-4">
+                    <input-currency [id]="'salesAmount'" [title]="'銷售額'" [(inputValue)]="model.salesAmount" [isRequired]="true"
+                    [isReadOnly]="model.isReadOnly('salesAmount', flowInfo)" [linkageEvent]="model.linkageAmount.bind(model)"></input-currency>
+                </div>
+                <div class="col-md-4">
+                    <input-currency [id]="'taxAmount'" [title]="'稅額'" [(inputValue)]="model.taxAmount" [isRequired]="true"
+                        [isReadOnly]="true" [linkageEvent]="model.linkageAmount.bind(model)"></input-currency>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+<div class="col">
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-file-invoice-dollar"></i>
+            立帳及付款資訊
+        </div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="form-floating mb-3 mb-md-0">
+                        <input-autocomplete [id]="'customerGroupCode'" [title]="'客戶群組'"
+                            [(value)]="model.customerGroupCode" [(name)]="model.customerGroupName"
+                            [getPagingAssistEvent]="getCustomerGroup.bind(this)" [model]="'select'" [isRequired]="true"
+                            [isReadOnly]="model.isReadOnly('customerGroupCode', flowInfo)"></input-autocomplete>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <div class="form-floating mb-3 mb-md-0">
+                            <input-autocomplete [id]="'customerCode'" [title]="'客戶名稱'" [(value)]="model.customerCode"
+                                [(name)]="model.customerName" [getPagingAssistEvent]="getCustomer.bind(this)"
+                                [model]="'select'" [isRequired]="true"
+                                [isReadOnly]="model.isReadOnly('customerCode', flowInfo)"></input-autocomplete>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <input-select [id]="'accountingDocumentType'" [title]="'會計文件類型'"
+                        [(options)]="model.accountingDocumentType" [isReadOnly]="model.isReadOnly('accountingDocumentType', flowInfo)" [isRequired]="true"></input-select>
+                </div>
+                <div class="col-md-6">
+                    <input-autocomplete [id]="'inputInvoiceItems'" [title]="'發票品名說明(代號)'"
+                        [(value)]="model.invoiceItemCode" [(name)]="model.invoiceItemDescription"
+                        [getPagingAssistEvent]="getInvoiceItem.bind(this)" [model]="'select'" [isRequired]="true"
+                        [isReadOnly]="model.isReadOnly('inputInvoiceItems', flowInfo)"></input-autocomplete>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <div class="form-floating mb-3 mb-md-0">
+                        <input-select [id]="'paymentMethod'" [title]="'付款方式'" [(options)]="model.paymentMethod"
+                            [isReadOnly]="model.isReadOnly('paymentMethod', flowInfo)"></input-select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-floating mb-3 mb-md-0">
+                        <input-date [title]="'過帳發票日期'" [(inputValue)]="model.invoiceDate"
+                            [isReadOnly]="model.isReadOnly('invoiceDate', flowInfo)"></input-date>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-check">
+                        <input class="form-check-input" id="inputEnableAutoTransfer" type="checkbox" value=""
+                            placeholder="是否自動立帳檔" aria-label="立帳檔註記" disabled />
+                        <label class="form-check-label" for="inputEnableAutoTransfer">
+                            是否自動立帳檔
+                            <span class="form-text" id="autoTransferHelp">此欄位由後端SAP主檔決定是否提供自動立帳選擇</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

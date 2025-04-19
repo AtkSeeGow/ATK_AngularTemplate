@@ -1,0 +1,10 @@
+{
+  "/Api/Authentication/CanActivate": "/AuthenticationCanActivate",
+  "/Api/Authentication/GenerateToken": "/AuthenticationGenerateToken",
+  "/Api/Common/GetUserInfo": "/CommonGetUserInfo",
+  "/Api/Todo/FetchBy*": "/TodoFetchBy",
+  "/Api/Query/FetchBy": "/QueryFetchBy",
+  "/Api/InvoiceApplicationForm/FindFormBy": "/InvoiceApplicationFormFindFormBy",
+  "/Api/InvoiceApplicationForm/FetchInvoiceItemBy*":"/InvoiceApplicationFormFetchInvoiceItemBy",
+  "/Api/InvoiceApplicationForm/FetchBuyerBy*":"/InvoiceApplicationFormFetchBuyerBy"
+}

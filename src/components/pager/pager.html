@@ -1,0 +1,44 @@
+<style>
+    .hidden {
+        display: none;
+    }
+</style>
+
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+
+        <li class="page-item" name="firstPage" [ngClass]="{'hidden': !model.pagers.firstPage}">
+            <a class="page-link" (click)="model.turnPage('firstPage')">1</a>
+        </li>
+        <li class="page-item" name="pre" [ngClass]="{'hidden':!model.pagers.pre}">
+            <a class="page-link" (click)="model.turnPage('pre')">&laquo;</a>
+        </li>
+        <li class="page-item" name="first" [ngClass]="{'hidden':!model.pagers.first}">
+            <a class="page-link" [ngClass]="{'pager-current-page': model.isCurrentPage('first')}"
+               (click)="model.turnPage('first')">{{model.pagers.first}}</a>
+        </li>
+        <li class="page-item" name="second" [ngClass]="{'hidden':!model.pagers.second}">
+            <a class="page-link" [ngClass]="{'pager-current-page': model.isCurrentPage('second')}"
+               (click)="model.turnPage('second')">{{model.pagers.second}}</a>
+        </li>
+        <li class="page-item" name="third" [ngClass]="{'hidden':!model.pagers.third}">
+            <a class="page-link" [ngClass]="{'pager-current-page': model.isCurrentPage('third')}"
+               (click)="model.turnPage('third')">{{model.pagers.third}}</a>
+        </li>
+        <li class="page-item" name="fourth" [ngClass]="{'hidden':!model.pagers.fourth}">
+            <a class="page-link" [ngClass]="{'pager-current-page': model.isCurrentPage('fourth')}"
+               (click)="model.turnPage('fourth')">{{model.pagers.fourth}}</a>
+        </li>
+        <li class="page-item" name="fifth" [ngClass]="{'hidden':!model.pagers.fifth}">
+            <a class="page-link" [ngClass]="{'pager-current-page': model.isCurrentPage('fifth')}"
+               (click)="model.turnPage('fifth')">{{model.pagers.fifth}}</a>
+        </li>
+        <li class="page-item" name="post" [ngClass]="{'hidden':!model.pagers.post}">
+            <a class="page-link" (click)="model.turnPage('post')">&raquo;</a>
+        </li>
+        <li class="page-item" name="lastPage" [ngClass]="{'hidden':!model.pagers.lastPage}">
+            <a class="page-link" (click)="model.turnPage('lastPage')">{{model.pageCount}}</a>
+        </li>
+        
+    </ul>
+</nav>

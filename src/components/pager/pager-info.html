@@ -1,0 +1,9 @@
+<span>
+    (第{{startIndexProxy}}-{{lastIndexProxy}}筆 / 共 {{model.recordCount}}筆)
+</span>
+<span *ngIf="!onlyRecordCount">
+    每頁顯示筆數:
+    <a class="btn badge" [ngClass]="{'active': model.pageSize === 15}" (click)="model.pageSize = 15">15</a>
+    <a class="btn badge"[ngClass]="{'active': model.pageSize === 25}" (click)="model.pageSize = 25">25</a>
+    <a class="btn badge" [ngClass]="{'active': model.pageSize === 50}" (click)="model.pageSize = 50">50</a>
+</span>
